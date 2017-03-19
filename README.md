@@ -11,4 +11,12 @@ This method return true/false depends on valid/invalid Email id passed as parame
 
 Implementation
 
-JSUtility.emailValidation(<pass email id parameter>) > this will return true/false
+JSUtility.emailValidation(pass email id parameter) > this will return true/false
+
+2. INRCurrency
+
+This method used Displaying a number in Indian currency format
+
+Implementation
+
+JSUtility.INRCurrency(unformatted value) > returns formatted value
