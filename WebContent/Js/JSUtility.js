@@ -71,3 +71,27 @@
 	        alert(err.Description);
 	    }
 	}
+ 
+ /**
+  * getRandom 
+  *  we are generating lots of random number, and maximum of them are in a range 
+  *  e.g. generating random number between X to Y.
+  */
+var getRandom = function (min, max) {  // Adding getRandom function to Math object
+	    if (min && max) {
+	        // If min and max both are provided
+	        if(max <= min) {
+	            return new Error("Max number can not be equal or less then min");
+	        } else {
+	            return parseInt(min + (Math.random() * (max - min))); // Our logic for getting a random number
+	        }
+	    } else if (min) { //  If only min provide, then that min will be max and min will be 0
+	        if(min < 1) {
+	            return new Error("Min number can not be less 1");
+	        } else {
+	            return parseInt(Math.random() * min)
+	        }
+	    } else { // If min and max both are not provided then return whatever Math.random returns.
+	        return Math.random();
+	    }
+	};
